@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Santhosh Reddy • Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="/advanced2/icon.jpeg" rel="stylesheet">
+
+  <!-- Swiper (project slider) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <svg class="loader-ring" viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="20" stroke-width="4" stroke="rgba(0,0,0,0.06)" fill="none"></circle>
+        <circle cx="25" cy="25" r="20" stroke-width="4" stroke="#00e5ff" fill="none" stroke-linecap="round" class="loader-stroke"></circle>
+      </svg>
+      <div class="loader-text">Loading portfolio</div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- PARTICLES CANVAS (star galaxy) -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- THEME TOGGLE -->
+  <button id="theme-btn" aria-label="Toggle theme" title="Toggle theme">
+    <i id="theme-icon" class="fa-solid fa-moon"></i>
+  </button>
+
+  <!-- FLOATING SOCIALS -->
+  <aside class="socials" aria-label="social links">
+    <a href="https://github.com/Santhoshreddy9278" target="_blank" rel="noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/santhosh-reddy-5a64242b2" target="_blank" rel="noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="site-header" role="navigation">
+    <div class="wrap">
+      <a class="brand" href="#home">SANTHOSH<span>REDDY</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO (parallax layers) -->
+    <section id="home" class="hero section">
+      <div class="parallax">
+        <div class="stars-layer" data-depth="0.10"></div>
+        <div class="mid-layer" data-depth="0.25"></div>
+        <div class="front-layer" data-depth="0.45"></div>
+      </div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-left reveal" data-delay="0.08">
+          <div class="profile-card" data-tilt>
+            <img src="https://github.com/Santhoshreddy9278/Smalltalktech-Internship/blob/main/image.png" alt="Santhosh profile" class="profile-img">
+            <div class="profile-badge">B.Tech • CSE</div>
+          </div>
+        </div>
+
+        <div class="hero-right reveal" data-delay="0.12">
+          <h1 class="hero-title">Hi, I’m <span>Chittamuru Naga Santhosh Reddy</span></h1>
+          <div class="typewriter" id="typewriter" aria-hidden="false"></div>
+          <p class="hero-desc">I build responsive web apps and Java full-stack solutions — clean UX, performance-driven and AI-assisted.</p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">See Projects</a>
+            <a class="btn outline" href="#contact">Contact Me</a>
+          </div>
+
+          <ul class="hero-details" aria-hidden="true">
+            <li><strong>Project:</strong> Pneumonia diseaase Detection</li>
+            <li><strong>College:</strong> Saveetha Univesity</li>
+            <li><strong>Location:</strong> Chennai, Tamil Nadu, India</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about section reveal" data-delay="0.14">
+      <div class="wrap">
+        <h2>About Me</h2>
+        <p>I’m a detail-oriented dev focused on Java full-stack and modern front-end tech. I enjoy building clean, fast, and reliable products. "Java Developer skilled in building robust, scalable applications using modern frameworks and clean coding practices". "Passionate about problem-solving, backend development, API design, and delivering high-performance software solutions".</p>
+
+        <div class="about-grid">
+          <div class="about-card" data-tilt>
+            <h4>Internship</h4>
+            <p>Web Development Internship at SmallTalkTech Prt Ltd— built responsive interfaces and REST integrations.</p>
+          </div>
+
+          <div class="about-card" data-tilt>
+            <h4>Education</h4>
+            <ul><li>B.Tech (CSE), Saveetha University, Chennai</li>
+            <li>Intermediate - 91%, Krishna Chaitanya College, Nellore</li>
+            <li>10th Standard - 90%, lumbini vidyalayam School, Chejerla</li></ul>
+          </div>
+
+          <div class="about-card" data-tilt>
+            <h4>Open Source</h4>
+            <ul><li>Active on GitHub — utilities, front-end components, and demo projects</li>
+            <li>Active on LinkedIn — Works, projects and Posts</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills section">
+      <div class="wrap reveal" data-delay="0.10">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-item" data-tilt>
+            <h4>HTML / CSS</h4>
+            <div class="bar"><div class="bar-fill" data-percent="95"></div></div>
+          </div>
+
+          <div class="skill-item" data-tilt>
+            <h4>JavaScript</h4>
+            <div class="bar"><div class="bar-fill" data-percent="85"></div></div>
+          </div>
+
+          <div class="skill-item" data-tilt>
+            <h4>Java (Full Stack)</h4>
+            <div class="bar"><div class="bar-fill" data-percent="88"></div></div>
+          </div>
+
+          <div class="skill-item rings" data-tilt>
+            <h4>Databases</h4>
+            <div class="rings-grid">
+              <svg class="ring" viewBox="0 0 36 36" data-percent="80">
+                <path class="ring-bg" d="M18 2.0845a15.9155 15.9155 0 1 0 0 31.831"/>
+              </svg>
+              <div class="ring-label">MySQL<br><span>80%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (Swiper) -->
+    <section id="projects" class="projects section reveal" data-delay="0.16">
+      <div class="wrap">
+        <h2>Projects</h2>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide project-card" data-tilt>
+              <h3>Pneumonia Detection</h3>
+              <p>Deep-learning pipeline for X-ray diagnosis with visual evaluation dashboard.</p>
+              <div class="project-links"><a href="#" class="btn outline">Details</a></div>
+            </div>
+
+            <div class="swiper-slide project-card" data-tilt>
+              <h3>Portfolio Website</h3>
+              <p>Modern responsive portfolio — animations, dark/light theme, EmailJS contact form.</p>
+              <div class="project-links"><a href="#" class="btn outline">Live</a></div>
+            </div>
+            <!-- add more slides as needed -->
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section reveal" data-delay="0.18">
+      <div class="wrap">
+        <h2>Contact Me</h2>
+
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form" aria-label="contact form">
+            <input type="text" id="name" name="from_name" placeholder="Your name" required>
+            <input type="email" id="email" name="reply_to" placeholder="Your email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+            <button type="submit" class="btn primary">Send Message</button>
+            <div id="form-status" aria-live="polite"></div>
+          </form>
+
+          <div class="contact-info">
+            <h4>Reach out</h4>
+            <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+            <p><strong>College:</strong> Saveetha University</p>
+            <p><strong>Project:</strong> Pneumonia Detection</p>
+            <div class="social-compact">
+              <a href="https://github.com/Santhoshreddy9278" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/santhosh-reddy-5a64242b2" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scrollTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">© 2025 Chittamuru Naga Santhosh Reddy — All rights reserved.</div>
+  </footer>
+
+  <!-- External libs -->
+  <script src="https://unpkg.com/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
