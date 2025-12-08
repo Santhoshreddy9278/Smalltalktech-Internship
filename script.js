@@ -1,10 +1,4 @@
-/* ===========================
-   Main JS: star particles + UI
-   =========================== */
 
-/* --------------------------
-   Loader hide / initial setup
-   ---------------------------*/
 window.addEventListener('load', () => {
   setTimeout(() => {
     const loader = document.getElementById('loader');
@@ -18,10 +12,7 @@ window.addEventListener('load', () => {
   }, 700);
 });
 
-/* --------------------------
-   Starry particles canvas
-   (galaxy style)
-   ---------------------------*/
+
 (() => {
   const canvas = document.getElementById('particles-canvas');
   if (!canvas) return;
@@ -109,26 +100,6 @@ window.addEventListener('load', () => {
     glow.style.left = e.clientX + 'px';
     glow.style.top = e.clientY + 'px';
   });
-})();
-
-/* --------------------------
-   Theme toggle (dark + light)
-   ---------------------------*/
-(() => {
-  const btn = document.getElementById('theme-btn');
-  const icon = document.getElementById('theme-icon');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    const isLight = document.body.classList.contains('light');
-    icon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-    try { localStorage.setItem('themeLight', isLight ? '1' : '0'); } catch (e) { }
-  });
-  // restore
-  try {
-    const val = localStorage.getItem('themeLight');
-    if (val === '1') { document.body.classList.add('light'); icon.className = 'fa-solid fa-sun'; }
-  } catch (e) { }
 })();
 
 /* --------------------------
@@ -240,12 +211,9 @@ function animateRings() {
 })();
 
 /* --------------------------
-   EmailJS contact form (client-side)
+   EmailJS contact form
    ---------------------------*/
 (() => {
-  // 1) Sign up at https://www.emailjs.com/
-  // 2) Create an email service and a template with variables: from_name, reply_to, message
-  // 3) Replace USER_ID, SERVICE_ID, TEMPLATE_ID below
 
   try { emailjs.init('-UrEAF2pDzYwAmXoP'); } catch (e) { /* ignore if lib missing */ }
 
@@ -283,4 +251,5 @@ document.addEventListener('DOMContentLoaded', () => {
   revealOnScroll();
   animateSkillBars();
   animateRings();
+
 });
