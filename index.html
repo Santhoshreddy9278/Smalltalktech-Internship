@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Santhosh Reddy • Portfolio</title>
+  <title style="background-color: rgb(8, 228, 118); font-style: italic;">Santhosh Reddy • Portfolio</title>
 
   <!-- Google Font -->
-  <link href="/advanced2/icon.jpeg" rel="stylesheet">
+  <link href="profile.png" rel="icon">
+
 
   <!-- Swiper (project slider) -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
@@ -36,21 +37,16 @@
   <!-- PARTICLES CANVAS (star galaxy) -->
   <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-  <!-- THEME TOGGLE -->
-  <button id="theme-btn" aria-label="Toggle theme" title="Toggle theme">
-    <i id="theme-icon" class="fa-solid fa-moon"></i>
-  </button>
-
   <!-- FLOATING SOCIALS -->
   <aside class="socials" aria-label="social links">
-    <a href="https://github.com/Santhoshreddy9278" target="_blank" rel="noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/santhosh-reddy-5a64242b2" target="_blank" rel="noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/Santhoshreddy9278" target="_blank" rel="noreferrer" title="GitHub"><img src="github.png" height="30" alt=""><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/santhosh-reddy-5a64242b2" target="_blank" rel="noreferrer" title="LinkedIn"><img src="linkedin.png" height="30" alt=""><i class="fab fa-linkedin"></i></a>
   </aside>
 
   <!-- HEADER -->
   <header class="site-header" role="navigation">
     <div class="wrap">
-      <a class="brand" href="#home">SANTHOSH<span>REDDY</span></a>
+      <a class="brand" href="#home">SANTHOSH<span> REDDY</span></a>
       <nav class="nav" aria-label="Main">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -166,18 +162,26 @@
       <div class="wrap">
         <h2>Projects</h2>
 
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" >
           <div class="swiper-wrapper">
             <div class="swiper-slide project-card" data-tilt>
               <h3>Pneumonia Detection</h3>
+              <h5>Engineering Project</h5>
               <p>Deep-learning pipeline for X-ray diagnosis with visual evaluation dashboard.</p>
-              <div class="project-links"><a href="#" class="btn outline">Details</a></div>
+              <div class="project-links"><a href="/project.pdf"  class="btn outline">Details</a></div>
             </div>
 
             <div class="swiper-slide project-card" data-tilt>
               <h3>Portfolio Website</h3>
               <p>Modern responsive portfolio — animations, dark/light theme, EmailJS contact form.</p>
               <div class="project-links"><a href="#" class="btn outline">Live</a></div>
+            </div>
+
+            <div class="swiper-slide project-card" data-tilt>
+              <h3>Smart Switch</h3>
+              <h5>Product Design & Development</h5>
+              <p>“A Smart Switch system designed to intelligently automate, monitor, and control electrical appliances for enhanced safety, efficiency, and user convenience.”</p>
+              <div class="project-links"><a href="https://docs.google.com/document/d/1mrQG1vGi8Ezbj3fgGSgp9B2rAQelPQP0dPCFmxy7b1g/edit?usp=sharing"  class="btn outline">Details</a></div>
             </div>
             <!-- add more slides as needed -->
           </div>
@@ -207,9 +211,11 @@
             <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
             <p><strong>College:</strong> Saveetha University</p>
             <p><strong>Project:</strong> Pneumonia Detection</p>
+            &nbsp;
             <div class="social-compact">
-              <a href="https://github.com/Santhoshreddy9278" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/santhosh-reddy-5a64242b2" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Santhoshreddy9278" target="_blank" rel="noreferrer"><img src="github.png" height="30" alt=""><i class="fab fa-github"></i></a>
+              &nbsp;
+              <a href="https://www.linkedin.com/in/santhosh-reddy-5a64242b2" target="_blank" rel="noreferrer"><img src="linkedin.png" height="30" alt=""><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -235,4 +241,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
